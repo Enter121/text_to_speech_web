@@ -8,8 +8,8 @@ import 'package:text_to_speech_platform_interface/text_to_speech_platform.dart';
 enum TtsStatus { playing, stopped, paused, resumed, error }
 
 /// A web implementation of the TextToSpeech plugin.
-class TextToSpeech extends TextToSpeechPlatform {
-  TextToSpeech() {
+class TextToSpeechWeb extends TextToSpeechPlatform {
+  TextToSpeechWeb() {
     _init();
   }
 
@@ -20,7 +20,7 @@ class TextToSpeech extends TextToSpeechPlatform {
 
   /// Registers this class as the default instance of [UrlLauncherPlatform].
   static void registerWith(Registrar registrar) {
-    TextToSpeechPlatform.instance = TextToSpeech();
+    TextToSpeechPlatform.instance = TextToSpeechWeb();
   }
 
   void _init() {
