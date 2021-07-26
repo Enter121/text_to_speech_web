@@ -8,6 +8,10 @@ import 'package:text_to_speech_platform_interface/text_to_speech_platform.dart';
 enum TtsStatus { playing, stopped, paused, resumed, error }
 
 /// A web implementation of the TextToSpeech plugin.
+///
+/// Web API reference:
+/// - https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#tts-section
+/// - https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis
 class TextToSpeechWeb extends TextToSpeechPlatform {
   TextToSpeechWeb() {
     _init();
@@ -18,11 +22,12 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
   html.SpeechSynthesis? synth;
   List<String> languages = <String>[];
 
-  /// Registers this class as the default instance of [UrlLauncherPlatform].
+  /// Registers this class as the default instance of [TextToSpeechPlatform].
   static void registerWith(Registrar registrar) {
     TextToSpeechPlatform.instance = TextToSpeechWeb();
   }
 
+  /// Initialise speech synthesis API
   void _init() {
     utterance = html.SpeechSynthesisUtterance();
     synth = html.window.speechSynthesis;
@@ -57,12 +62,9 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     });
   }
 
+  /// Stop current utterance (if playing) and start speak new utterance
   @override
   Future<bool?> speak(String text) {
-    if (status != TtsStatus.stopped && status != TtsStatus.playing) {
-      return Future<bool>.value(false);
-    }
-
     try {
       stop();
       utterance!.text = text;
@@ -74,12 +76,9 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     }
   }
 
+  /// Stop current utterance immediately
   @override
   Future<bool?> stop() {
-    if (status != TtsStatus.playing) {
-      return Future<bool>.value(false);
-    }
-
     try {
       synth!.cancel();
       return Future<bool>.value(true);
@@ -89,6 +88,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     }
   }
 
+  /// Pause current utterance immediately
   @override
   Future<bool?> pause() {
     try {
@@ -100,6 +100,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     }
   }
 
+  /// Resume current paused utterance
   @override
   Future<bool?> resume() {
     try {
@@ -111,6 +112,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     }
   }
 
+  /// Set rate (tempo) of next utterance
   @override
   Future<bool?> setRate(num rate) {
     try {
@@ -124,6 +126,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     return Future<bool>.value(false);
   }
 
+  /// Set volume of next utterance
   @override
   Future<bool?> setVolume(num volume) {
     try {
@@ -137,6 +140,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     return Future<bool>.value(false);
   }
 
+  /// Set pitch of next utterance
   @override
   Future<bool?> setPitch(num pitch) {
     try {
@@ -150,6 +154,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     return Future<bool>.value(false);
   }
 
+  /// Set language of next utterance
   @override
   Future<bool?> setLanguage(String language) {
     try {
@@ -163,6 +168,8 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     return Future<bool>.value(false);
   }
 
+  /// Get default language.
+  /// Always returns 'English (en-US)'.
   @override
   Future<String?> getDefaultLanguage() {
     return Future.value('en-US');
@@ -199,6 +206,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
         as JsArray<dynamic>?;
   }
 
+  /// Get list of supported voices
   @override
   Future<List<String>?> getVoice() {
     List<String> voices = <String>[];
@@ -213,6 +221,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     return Future.value(voices);
   }
 
+  /// Get language code of supported voices (e.g. en-US)
   @override
   Future<List<String>?> getVoiceByLang(String lang) {
     List<String> voices = <String>[];

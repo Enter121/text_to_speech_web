@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c6d79deb-a577-403e-ab8a-c022b1fffa0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/text_to_speech_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/text_to_speech_web.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="dev.polek.adbwifi.settings.AdbWifiConfigurable" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -77,9 +79,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="87" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1627271598648" />
-    <state x="385" y="196" key="search.everywhere.popup" timestamp="1627266140687">
+    <state width="1398" height="240" key="GridCell.Tab.0.bottom" timestamp="1627290816512">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" key="search.everywhere.popup/0.0.1440.900/-262.-1080.1920.1080@0.0.1440.900" timestamp="1627266140687" />
+    <state width="1398" height="240" key="GridCell.Tab.0.bottom/0.0.1440.900/-262.-1080.1920.1080@0.0.1440.900" timestamp="1627290816512" />
+    <state width="1398" height="240" key="GridCell.Tab.0.center" timestamp="1627290816506">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.center/0.0.1440.900/-262.-1080.1920.1080@0.0.1440.900" timestamp="1627290816506" />
+    <state width="1398" height="240" key="GridCell.Tab.0.left" timestamp="1627290816500">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.left/0.0.1440.900/-262.-1080.1920.1080@0.0.1440.900" timestamp="1627290816500" />
+    <state width="1398" height="240" key="GridCell.Tab.0.right" timestamp="1627290816508">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.right/0.0.1440.900/-262.-1080.1920.1080@0.0.1440.900" timestamp="1627290816508" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1627290753828">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/-262.-1080.1920.1080@0.0.1440.900" timestamp="1627290753828" />
   </component>
 </project>

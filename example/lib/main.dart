@@ -18,17 +18,14 @@ class _MyAppState extends State<MyApp> {
   TextToSpeechWeb tts = TextToSpeechWeb();
 
   String text = '';
-  double volume = 1; // 0-1
-  double rate = 1.0; // 0-2
-  double pitch = 1.0; // 0-2
+  double volume = 1; // Range: 0-1
+  double rate = 1.0; // Range: 0-2
+  double pitch = 1.0; // Range: 0-2
 
-  /// language
   String? language;
   String? languageCode;
   List<String> languages = [];
   List<String> languageCodes = [];
-
-  /// voice
   String? voice;
 
   TextEditingController textEditingController = TextEditingController();
@@ -77,8 +74,8 @@ class _MyAppState extends State<MyApp> {
 
   Future<String?> getVoiceByLang(String lang) async {
     List<String>? voices = await tts.getVoiceByLang(languageCode!);
-    if (voice != null && voice!.isNotEmpty) {
-      return voices!.first;
+    if (voices != null && voices.isNotEmpty) {
+      return voices.first;
     }
     return null;
   }
