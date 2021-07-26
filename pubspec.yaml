@@ -1,0 +1,26 @@
+name: text_to_speech_web
+description: Web platform implementation of text_to_speech.
+version: 0.1.0
+homepage: https://github.com/ixsans/text_to_speech_web
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  text_to_speech_platform_interface: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      web:
+        pluginClass: TextToSpeech
+        fileName: text_to_speech_web.dart
