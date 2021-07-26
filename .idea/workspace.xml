@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c6d79deb-a577-403e-ab8a-c022b1fffa0d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/text_to_speech_web.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/text_to_speech_web.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +42,41 @@
       <option name="presentableId" value="Default" />
       <updated>1627233026869</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update web plugin class name">
+      <created>1627271532777</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1627271532777</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Bump version v0.1.1">
+      <created>1627271590125</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1627271590125</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update changelog">
+      <created>1627271598841</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1627271598841</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update web plugin class name" />
+    <MESSAGE value="Bump version v0.1.1" />
+    <MESSAGE value="Update changelog" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update changelog" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="87" y="0" key="CommitChangelistDialog2" timestamp="1627271598648">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="87" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1627271598648" />
     <state x="385" y="196" key="search.everywhere.popup" timestamp="1627266140687">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
