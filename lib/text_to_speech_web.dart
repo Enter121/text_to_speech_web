@@ -166,7 +166,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
             if (voice != null) {
               if(voice['lang'].toString().contains(language)){
                 context['speechSynthesis']['voice']=voice;
-                print(voice);
+                print(voice['lang']);
               }
             }
           }
