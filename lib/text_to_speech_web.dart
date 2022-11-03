@@ -160,8 +160,16 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     try {
       if (utterance != null) {
         utterance!.lang = language;
-        List<SpeechSynthesisVoice> voices =synth!.getVoices();
-        utterance!.voice =voices.where((element) => element.lang.contains(language));
+        JsArray<dynamic> voiceArray = _getVoices();
+        if (voiceArray != null) {
+          for (dynamic voice in voiceArray) {
+            if (voice != null) {
+              if(voice['lang'].toString().contains(language)){
+                utterance!.voice = voice['lang'];
+              }
+            }
+          }
+        }
         return Future<bool>.value(true);
       }
     } catch (e) {
