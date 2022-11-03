@@ -160,11 +160,11 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     try {
       if (utterance != null) {
         utterance!.lang = language;
-        JsArray<dynamic>? voiceArray = _getVoices();
+        List<SpeechSynthesisVoice>? voiceArray = synth!.getVoices();
         if (voiceArray != null) {
-          for (dynamic voice in voiceArray) {
+          for (SpeechSynthesisVoice? voice in voiceArray) {
             if (voice != null) {
-              if(voice['lang'].toString().contains(language)){
+              if(voice.lang.toString().contains(language)){
                 utterance!.voice = voice;
                 print(voice);
               }
@@ -174,7 +174,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
         return Future<bool>.value(true);
       }
     } catch (e) {
-      print('setPitch() error: ${e.toString()}');
+      print('setLanguage() error: ${e.toString()}');
     }
     return Future<bool>.value(false);
   }
