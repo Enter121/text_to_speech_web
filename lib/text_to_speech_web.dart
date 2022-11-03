@@ -165,7 +165,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
           for (dynamic voice in voiceArray) {
             if (voice != null) {
               if(voice['lang'].toString().contains(language)){
-                js.context.setProperty(context['speechSynthesis'],'voice', voice);
+                context.setProperty(context['speechSynthesis'],'voice', voice);
                 print(voice);
               }
             }
