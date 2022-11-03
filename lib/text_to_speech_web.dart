@@ -160,7 +160,7 @@ class TextToSpeechWeb extends TextToSpeechPlatform {
     try {
       if (utterance != null) {
         utterance!.lang = language;
-        JsArray<dynamic> voiceArray = _getVoices();
+        JsArray<dynamic>? voiceArray = _getVoices();
         if (voiceArray != null) {
           for (dynamic voice in voiceArray) {
             if (voice != null) {
